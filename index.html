@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OgniFin</title>
+  <script src="bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
+  <link href="bootstrap-5.3.2-dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="bootstrap-icons-1.11.2/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+  <div class="container-fluid pl-3">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light m-2 p-2">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">OgniFin</a>
+        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="toggler-icon top-bar"></span>
+          <span class="toggler-icon middle-bar"></span>
+          <span class="toggler-icon bottom-bar"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Dashboard</a>
+            </li>
+          </ul>
+
+          <!--Login/Register Button-->
+          <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Login ou Registro
+          </button>
+
+          <!--Login/Register - Login Modal-->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Login</h1>
+                  <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#register-modal">
+                    Registro
+                  </button>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Email address</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">Password</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Login/Register - Register Modal-->
+          <div class="modal fade" id="register-modal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="btn btn-light " data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Login
+                  </button>
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Registro</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Email address</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">Password</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Registrar</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </nav>
+
+    <div class="container">
+
+      <div id="month-nav" class="container text-start align-middle p-0">
+
+        <button type="button" class="btn btn-light bi bi-calendar-month m-0" style="display: inline-block;"></button>
+        <button type="button" class="btn btn-light bi bi-caret-left-fill m-0" style="display: inline-block;"></button>
+        <p class="fw-bold fs-3 m-0 p-0" style="display: inline-block;">Dezembro 2023</p>
+        <button type="button" class="btn btn-light bi bi-caret-right-fill m-0" style="display: inline-block;"></button>
+
+      </div>
+
+      <div class="container">
+        <p class="fw-bold fs-4 mb-0 text-center">Resumo Mensal</p>
+        <p class="fw-bold fs-4">Saldo Total</p>
+        <p class="fw-bold fs-5">R$999,99</p>
+
+        <hr>
+
+        <p class="fw-bold fs-4">Balanço do Mês</p>
+        <p class="fw-bold fs-5">R$-99,99</p>
+
+        <hr>
+
+        <p class="fw-bold fs-5 p-0 m-0" style="display: inline-block;">Entradas: </p>
+        <p class="fw-bold fs-5 p-0 m-0" style="display: inline-block;">R$99,99</p>
+        <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0"
+          aria-valuemax="100">
+          <div class="progress-bar bg-success" style="width: 25%">25%</div>
+        </div>
+
+        <p class="fw-bold fs-5 p-0 m-0" style="display: inline-block;">Saídas: </p>
+        <p class="fw-bold fs-5 p-0 m-0" style="display: inline-block;">R$99,99</p>
+        <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="25" aria-valuemin="0"
+          aria-valuemax="100">
+          <div class="progress-bar bg-danger" style="width: 25%">25%</div>
+        </div>
+
+        <hr>
+
+        <div class="row text-center p-0">
+
+          <!--Add Transaction Button - Enables Transaction Modal-->
+          <div class="col"><button type="button" class="btn btn-dark fw-bold fs-5" data-bs-toggle="modal"
+              data-bs-target="#transaction-modal">ADICIONAR TRANSAÇÃO</button></div>
+
+          <!--See Transactions History Button - Enables Transactions History Modal-->
+          <div class="col"><button type="button" class="btn btn-dark fw-bold fs-5" data-bs-toggle="modal" data-bs-target="#transactions-modal">VER TRANSAÇÔES</button></div>
+
+          <!--Transaction Modal-->
+          <div class="modal fade text-start" id="transaction-modal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Transação</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <p class="m-0">Tipo</p>
+                    <div class="row">
+                      <div class="col">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                          <label class="form-check-label" for="flexRadioDefault1">
+                            Receita
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                          <label class="form-check-label" for="flexRadioDefault2">
+                            Despesa
+                          </label>
+                        </div>
+                      </div>
+                      <div class="mb-3">
+                        <label for="input-valor" class="form-label">Valor</label>
+                        <input type="number" id="input-valor" class="form-control">
+                      </div>
+                      <div class="mb-3">
+                        <label for="input-description" class="form-label">Descrição</label>
+                        <input type="text" id="input-description" class="form-control">
+                      </div>
+                      <div class="mb-3">
+                        <label for="input-date" class="form-label">Data</label>
+                        <input type="date" id="input-date" class="form-control">
+                      </div>
+
+                    </div>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Adicionar Transação</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Transactions History Modal-->
+          <div class="modal fade text-start" id="transactions-modal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Transações</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body pb-0">
+                  <div id="month-nav" class="container text-start align-middle p-0 mb-0">
+
+                    <button type="button" class="btn btn-light bi bi-calendar-month m-0" style="display: inline-block;"></button>
+                    <button type="button" class="btn btn-light bi bi-caret-left-fill m-0" style="display: inline-block;"></button>
+                    <p class="fw-bold fs-3 m-0 p-0" style="display: inline-block;">Dezembro 2023</p>
+                    <button type="button" class="btn btn-light bi bi-caret-right-fill m-0" style="display: inline-block;"></button>
+  
+                  </div>
+                  <div class="mb-3 pb-0">
+                    <p class="fs-5 fw-bold">9 de Dezembro</p>
+                    <p class="fs-6 fw-normal">Cabeleireiro</p>
+                    <p class="fs-6 fw-light">-R$9,99</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+
+    </div>
+
+  </div>
+
+
+</body>
+
+</html>
